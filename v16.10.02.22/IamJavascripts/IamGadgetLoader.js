@@ -8,6 +8,8 @@ function IamGadgetLoader() {
 			var IamCloneNode = IamDocumentRoot[IamNodeState].cloneNode(false);
 			var IamXMLHttpRequestPath = "https://iamprogrammerlk.github.io";
 			switch (IamDocumentRoot[IamNodeState].getAttribute("IamGadgetLoader")) {
+				case "IamAdcodeConverter":
+					IamXMLHttpRequestPath = IamXMLHttpRequestPath + "/IamAdcodeConverter/Index.html";
 					break;
 /* 				case "":
 					IamXMLHttpRequestPath = IamXMLHttpRequestPath + "";
