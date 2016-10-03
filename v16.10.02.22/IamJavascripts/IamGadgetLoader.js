@@ -9,7 +9,7 @@ function IamGadgetLoader() {
 			var IamXMLHttpRequestPath = "https://iamprogrammerlk.github.io";
 			switch (IamDocumentRoot[IamNodeState].getAttribute("IamGadgetLoader")) {
 				case "IamAdcodeConverter":
-					IamXMLHttpRequestPath = IamXMLHttpRequestPath + "/IamAdcodeConverter/Index.html";
+					IamXMLHttpRequestPath = IamXMLHttpRequestPath + "/IamAdcodeConverter/index.html";
 					break;
 /* 				case "":
 					IamXMLHttpRequestPath = IamXMLHttpRequestPath + "";
@@ -27,13 +27,11 @@ function IamGadgetLoader() {
 			}      
 			IamXMLHttpRequest.open("GET", IamXMLHttpRequestPath, true);
 			IamXMLHttpRequest.send();
-			return;
 		}
 	}
 
 	console.log("IamGadgetLoader::Loaded");
 	
 	
-}
-IamGadgetLoader();
+};
 
