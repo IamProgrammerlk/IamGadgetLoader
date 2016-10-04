@@ -4,13 +4,13 @@
 (function IamGadgetLoader() {
 
 	this.IamGetHttpRequestUrl = function(IamGadgetLoaderElement) {
-		var IamGetHttpRequestUrl = location.protocol + "//iamprogrammerlk.github.io/" + IamGadgetLoaderElement.getAttribute("IamGadgetLoader");
+		var IamHttpRequestUrl = location.protocol + "//iamprogrammerlk.github.io/" + IamGadgetLoaderElement.getAttribute("IamGadgetLoader");
 		if (IamGadgetLoaderElement.getAttribute("IamGadgetVersion")== null){
-			IamGetHttpRequestUrl += "/index.html";
+			IamHttpRequestUrl += "/index.html";
 		}else{
-			IamGetHttpRequestUrl += "/" + IamGadgetLoaderElement.getAttribute("IamGadgetVersion") + "/index.html"
+			IamHttpRequestUrl += "/" + IamGadgetLoaderElement.getAttribute("IamGadgetVersion") + "/index.html"
 		}
-		return  IamGetHttpRequestUrl;
+		return  IamHttpRequestUrl;
 	};
 	
 	var IamAllInsElements = document.getElementsByTagName("ins");
