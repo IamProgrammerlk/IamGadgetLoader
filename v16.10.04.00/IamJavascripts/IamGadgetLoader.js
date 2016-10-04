@@ -1,4 +1,3 @@
-
 //IamGadgetLoader
 function IamGadgetLoader() {
 	var IamDocumentRoot = document.getElementsByTagName("div");
@@ -39,4 +38,3 @@ function IamGadgetLoader() {
 	
 }
 IamGadgetLoader();
-
