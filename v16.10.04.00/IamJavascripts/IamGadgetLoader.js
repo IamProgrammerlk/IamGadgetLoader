@@ -1,5 +1,5 @@
 //IamGadgetLoader
-var IamGadgetLoader = (function () {
+var IamGadgetLoader = function () {
 	var IamGadgetLoader = document.getElementsByTagName("ins");
 	var IamGadgetLoaderCount;
 	for (IamGadgetLoaderCount = 0; IamGadgetLoaderCount < IamGadgetLoader.length; IamGadgetLoaderCount++) {
@@ -8,4 +8,4 @@ var IamGadgetLoader = (function () {
 
 	console.log("IamGadgetLoader::Loaded ", IamGadgetLoader.length);
 	
-});
+};
