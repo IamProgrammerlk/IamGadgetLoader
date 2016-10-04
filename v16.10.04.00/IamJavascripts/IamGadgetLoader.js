@@ -1,9 +1,9 @@
-window.IamGadgetLoader|| document.write('
+
 
 //IamGadgetLoader
 (function IamGadgetLoader() {
 
-	IamGetHttpRequestUrl = function(IamGadgetLoaderElement) {
+	this.IamGetHttpRequestUrl = function(IamGadgetLoaderElement) {
 		var IamGetHttpRequestUrl = location.protocol + "//iamprogrammerlk.github.io/" + IamGadgetLoaderElement.getAttribute("IamGadgetLoader");
 		if (IamGadgetLoaderElement.getAttribute("IamGadgetVersion")== null){
 			IamGetHttpRequestUrl += "/index.html";
@@ -19,7 +19,7 @@ window.IamGadgetLoader|| document.write('
 	for (IamAllInsElementsCount = 0; IamAllInsElementsCount < IamAllInsElements.length; IamAllInsElementsCount++) {
 		if (IamAllInsElements[IamAllInsElementsCount].getAttribute("IamGadgetLoader")){
 		
-			console.log(IamGetHttpRequestUrl(IamAllInsElements[IamAllInsElementsCount]));
+			console.log(this.IamGetHttpRequestUrl(IamAllInsElements[IamAllInsElementsCount]));
 			
 			//IamGadgetLoaderElements.push(IamAllInsElements[IamAllInsElementsCount]);
 			
@@ -31,4 +31,3 @@ window.IamGadgetLoader|| document.write('
 	
 	return;
 })();
-');
