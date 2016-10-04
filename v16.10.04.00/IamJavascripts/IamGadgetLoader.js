@@ -1,5 +1,5 @@
 //IamGadgetLoader
-var IamGadgetLoader = function () {
+/* function IamGadgetLoader() {
 	var IamGadgetLoader = document.getElementsByTagName("ins");
 	var IamGadgetLoaderCount;
 	for (IamGadgetLoaderCount = 0; IamGadgetLoaderCount < IamGadgetLoader.length; IamGadgetLoaderCount++) {
@@ -8,4 +8,19 @@ var IamGadgetLoader = function () {
 
 	console.log("IamGadgetLoader::Loaded ", IamGadgetLoader.length);
 	
-};
+}
+IamGadgetLoader(); */
+
+
+(function (i, s, o, g, r, a, m) {
+	i['GoogleAnalyticsObject'] = r;
+	i[r] = i[r] || function () {
+		(i[r].q = i[r].q || []).push(arguments)
+	},
+	i[r].l = 1 * new Date();
+	a = s.createElement(o),
+	m = s.getElementsByTagName(o)[0];
+	a.async = 1;
+	a.src = g;
+	m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
