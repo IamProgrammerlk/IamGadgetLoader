@@ -1,3 +1,5 @@
+window.IamGadgetLoader|| document.write('
+
 //IamGadgetLoader
 (function IamGadgetLoader() {
 
@@ -29,3 +31,4 @@
 	
 	return;
 })();
+');
