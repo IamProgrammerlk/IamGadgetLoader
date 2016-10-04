@@ -1,24 +1,31 @@
 //IamGadgetLoader
 (function IamGadgetLoader() {
-	var IamGadgetLoader = document.getElementsByTagName("ins");
-	var IamGadgetLoaderCount;
-	for (IamGadgetLoaderCount = 0; IamGadgetLoaderCount < IamGadgetLoader.length; IamGadgetLoaderCount++) {
 
-		switch (IamGadgetLoader[IamGadgetLoaderCount].getAttribute("IamGadgetLoader")) {
-			case "IamAdcodeConverter":
-				console.log("IamGadgetLoader::IamAdcodeConverter ", IamGadgetLoader.length);
-				break;
- 			case "IamAdcodeConverter2":
-				console.log("IamGadgetLoader::IamAdcodeConverter2 ", IamGadgetLoader.length);
-				break;
-			case "IamAdcodeConverter3":
-				console.log("IamGadgetLoader::IamAdcodeConverter3 ", IamGadgetLoader.length);
-				break;
-			default: 
-				return;
+	IamGetHttpRequestUrl = function(IamGadgetLoaderElement) {
+		var IamGetHttpRequestUrl = location.protocol + "//iamprogrammerlk.github.io/" + IamGadgetLoaderElement.getAttribute("IamGadgetLoader");
+		if (IamGadgetLoaderElement.getAttribute("IamGadgetVersion")== null){
+			IamGetHttpRequestUrl += "/index.html";
+		}else{
+			IamGetHttpRequestUrl += "/" + IamGadgetLoaderElement.getAttribute("IamGadgetVersion") + "/index.html"
 		}
-		console.log(IamGadgetLoader.length);
+		return  IamGetHttpRequestUrl;
+	};
+	
+	var IamAllInsElements = document.getElementsByTagName("ins");
+	var IamAllInsElementsCount;
+	var IamGadgetLoaderElements = [];
+	for (IamAllInsElementsCount = 0; IamAllInsElementsCount < IamAllInsElements.length; IamAllInsElementsCount++) {
+		if (IamAllInsElements[IamAllInsElementsCount].getAttribute("IamGadgetLoader")){
 		
+			console.log(IamGetHttpRequestUrl(IamAllInsElements[IamAllInsElementsCount]));
+			
+			//IamGadgetLoaderElements.push(IamAllInsElements[IamAllInsElementsCount]);
+			
+		} else {
+			console.error("IamGadgetLoader :: I can't find <ins IamGadgetLoader='IamToolName'></ins> elements in the document");
+			break;
+		}
 	}
 	
+	return;
 })();
